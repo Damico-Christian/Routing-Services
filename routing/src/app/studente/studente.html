@@ -1,0 +1,11 @@
+<td>{{ datiStudente.id }}</td>
+<td>{{ datiStudente.nome }}</td>
+<td>{{ datiStudente.classe }}</td>
+<td>
+  <button class="btn btn-primary btn-sm" (click)="toggleMedia()">
+    {{ mostraMedia ? 'Nascondi media' : 'Mostra media' }}
+  </button>
+  <span *ngIf="mostraMedia" class="ms-2 badge bg-info text-dark">
+    Media: {{ datiStudente.mediaVoti }}
+  </span>
+</td>

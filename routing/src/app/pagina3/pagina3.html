@@ -1,0 +1,27 @@
+<h2>Elenco Studenti</h2>
+
+<table class="table table-striped table-bordered mt-3">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Classe</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let studente of studenti">
+      <td>{{ studente.id }}</td>
+      <td>{{ studente.nome }}</td>
+      <td>{{ studente.classe }}</td>
+      <td>
+        <button class="btn btn-primary btn-sm" (click)="studente.mostraMedia = !studente.mostraMedia">
+          {{ studente.mostraMedia ? 'Nascondi media' : 'Mostra media' }}
+        </button>
+        <span *ngIf="studente.mostraMedia" class="ms-2 badge bg-info text-dark">
+          Media: {{ studente.mediaVoti }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
