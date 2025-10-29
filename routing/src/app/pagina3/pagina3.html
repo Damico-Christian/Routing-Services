@@ -21,6 +21,7 @@
         <span *ngIf="studente.mostraMedia" class="ms-2 badge bg-info text-dark">
           Media: {{ studente.mediaVoti }}
         </span>
+        <a [routerLink]="['/pagina3', studente.id]" class="btn btn-info btn-sm ms-2">Mostra dettagli</a>
         <button class="btn btn-danger btn-sm ms-2" (click)="rimuoviStudente(studente.id)">
           Elimina
         </button>

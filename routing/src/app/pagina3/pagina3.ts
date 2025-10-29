@@ -1,11 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StudenteService, Studente } from '../services/studenti-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pagina3',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './pagina3.html',
   styleUrl: './pagina3.css',
 })
